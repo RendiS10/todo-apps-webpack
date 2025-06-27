@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inder&family=Karla:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <header>
+      <h5>Todo-App Rendi Sutendi</h5>
+    </header>
+    <main>
+      <aside class="sidebar" id="sidebar">
+        <h3>Menu</h3>
+        <ul>
+          <li>
+            <a href="#" class="sidebar-link">
+              <i class="fa-solid fa-plus"></i> Tambah Tugas
+            </a>
+          </li>
+          <li>
+            <a href="#taskList" class="sidebar-link">
+              <i class="fa-solid fa-tasks"></i> Manajemen Tugas
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <article class="content">
+        <h3 id="formTitle">Tambah Tugas</h3>
+        <form id="taskForm" action="" method="post">
+          <div class="form-group">
+            <label for="taskName">Nama Tugas</label>
+            <input type="text" id="taskName" name="taskName" required />
+          </div>
+          <div class="form-group">
+            <label for="taskDescription">Deskripsi Tugas</label>
+            <textarea
+              id="taskDescription"
+              name="taskDescription"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="dueDate">Tanggal Jatuh Tempo</label>
+            <input type="date" id="dueDate" name="dueDate" required />
+          </div>
+          <div class="form-group">
+            <label for="priority">Prioritas</label>
+            <select id="priority" name="priority" required>
+              <option value="low">Rendah</option>
+              <option value="medium">Sedang</option>
+              <option value="high">Tinggi</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn-submit">Tambah Tugas</button>
+          </div>
+        </form>
+        <br />
+        <div id="taskList" class="task-list" style="margin-top: 32px">
+          <h3 align="center">Daftar Tugas</h3>
+          <!-- Daftar tugas akan muncul di sini -->
+        </div>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
